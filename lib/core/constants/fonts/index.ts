@@ -1,7 +1,11 @@
-import { Montserrat, Unica_One } from "next/font/google";
+import { Inter, Montserrat, Unica_One } from "next/font/google";
 import LocalFont from "next/font/local";
 
 // Google fonts
+export const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
 export const montserrat = Montserrat({
   subsets: ["latin"],
   variable: "--font-montserrat",
