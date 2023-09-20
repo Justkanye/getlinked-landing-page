@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { navlinks } from "@/lib/core/constants/navigation";
 import { cn } from "@/lib/core/utils";
 import RegisterButton from "@/components/shared/RegisterButton";
+import MobileNav from "./MobileNav";
 
 const Navbar = () => {
   const pathName = usePathname();
@@ -19,7 +20,7 @@ const Navbar = () => {
         </Link>
       </div>
       <div className='flex-none'>
-        <ul className='menu menu-horizontal items-center'>
+        <ul className='menu menu-horizontal items-center hidden md:inline-flex'>
           {navlinks.map(({ href, label }) => (
             <li key={href}>
               <Link
@@ -35,6 +36,7 @@ const Navbar = () => {
           ))}
           <RegisterButton className='ml-20' />
         </ul>
+        <MobileNav pathName={pathName} />
       </div>
     </nav>
   );
