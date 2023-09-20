@@ -4,17 +4,18 @@ import { usePathname } from "next/navigation";
 
 import { navlinks } from "@/lib/core/constants/navigation";
 import { cn } from "@/lib/core/utils";
+import RegisterButton from "@/components/shared/RegisterButton";
 
 const Navbar = () => {
   const pathName = usePathname();
   return (
-    <nav className='navbar p-10'>
+    <nav className='navbar px-20 pt-10 pb-6'>
       <div className='flex-1'>
         <Link
           href='/'
-          className='font-bold font-clash-display text-4xl transition-colors duration-500 ease-in-out text-white hover:text-primary'
+          className='font-bold font-clash-display text-4xl transition-colors duration-500 ease-in-out hover:text-primary group'
         >
-          get<span className='text-primary hover:text-white'>Linked</span>
+          get<span className='text-primary group-hover:text-white'>Linked</span>
         </Link>
       </div>
       <div className='flex-none'>
@@ -22,7 +23,7 @@ const Navbar = () => {
           {navlinks.map(({ href, label }) => (
             <li key={href}>
               <Link
-                className={cn("capitalize text-white", {
+                className={cn("capitalize", {
                   "bg-primary-gradient bg-clip-text text-transparent":
                     pathName === href,
                 })}
@@ -32,12 +33,7 @@ const Navbar = () => {
               </Link>
             </li>
           ))}
-          <Link
-            href='/register'
-            className='px-12 py-4 btn rounded text-white ml-20 bg-primary-gradient hover:animate-my-pulse'
-          >
-            Register
-          </Link>
+          <RegisterButton className='ml-20' />
         </ul>
       </div>
     </nav>

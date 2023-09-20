@@ -1,8 +1,10 @@
-import Navbar from "@/components/layouts/Navbar";
 import "./globals.css";
+
 import type { Metadata } from "next";
-import { clashDisplay, montserrat } from "@/lib/core/constants/fonts";
+
 import { cn } from "@/lib/core/utils";
+import Navbar from "@/components/layouts/Navbar";
+import { clashDisplay, montserrat, unicaOne } from "@/lib/core/constants/fonts";
 
 export const metadata: Metadata = {
   title: "GetLinked",
@@ -20,7 +22,9 @@ export default function RootLayout({
         className={cn(
           clashDisplay.variable,
           montserrat.variable,
-          montserrat.className
+          unicaOne.variable,
+          montserrat.className,
+          "text-white"
         )}
       >
         <Navbar />

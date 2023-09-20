@@ -20,10 +20,12 @@ const config: Config = {
         "primary-bg": "var(--primary-bg)",
         "903aff": "#903aff",
         primary: "var(--primary)",
+        border: "rgba(255, 255, 255, 0.18)",
       },
       fontFamily: {
         inter: ["var(--font-inter)"],
         montserrat: ["var(--font-montserrat)"],
+        "unica-one": ["var(--font-unica-one)"],
         "clash-display": ["var(--font-clash-display)"],
       },
       animation: {
