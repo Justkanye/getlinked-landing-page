@@ -25,6 +25,7 @@
     "postcss": "^8.4.30",
     "react": "^18.2.0",
     "react-confetti": "^6.1.0",
+    "react-countdown": "^2.3.5",
     "react-daisyui": "^4.1.1",
     "react-dom": "^18.2.0",
     "react-icons": "^4.11.0",
