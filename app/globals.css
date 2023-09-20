@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --primary-gradient: linear-gradient(270deg, #903aff 0%, #fe34b9 100%);
+  --primary-bg: #150e28;
+  --primary: #d434fe;
+}
+
+html {
+  scroll-behavior: smooth;
+}

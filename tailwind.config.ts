@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 import daisyui from "daisyui";
+import daisyuiThemes from "daisyui/src/theming/themes";
 
 const config: Config = {
   content: [
@@ -13,16 +14,58 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "primary-gradient": "var(--primary-gradient)",
       },
       colors: {
-        primary: "",
-        "primary-bg": "#150e28",
+        "primary-bg": "var(--primary-bg)",
         "903aff": "#903aff",
-        d434fe: "#d434fe",
+        primary: "var(--primary)",
+      },
+      fontFamily: {
+        inter: ["var(--font-inter)"],
+        montserrat: ["var(--font-montserrat)"],
+        "clash-display": ["var(--font-clash-display)"],
+      },
+      animation: {
+        bg: "bg-animation 2s ease infinite;",
+        "my-pulse": "my-pulse 650ms ease-in-out forwards;",
+      },
+      keyframes: {
+        "bg-animation": {
+          "0%,100%": {
+            "background-position": "0% 50%",
+          },
+          "50%": {
+            "background-position": "100% 50%",
+          },
+        },
+        "my-pulse": {
+          "0%,85%": {
+            transform: "scale(0.985);",
+          },
+          "50%": {
+            transform: "scale(1.025);",
+          },
+          "100%": {
+            transform: "scale(1);",
+          },
+        },
       },
     },
   },
   plugins: [daisyui],
   darkMode: "class",
+  daisyui: {
+    themes: [
+      {
+        dark: {
+          ...daisyuiThemes["[data-theme=dark]"],
+          primary: "var(--primary)",
+          secondary: "var(--primary-bg)",
+          accent: "var(--accent)",
+        },
+      },
+    ],
+  },
 };
 export default config;

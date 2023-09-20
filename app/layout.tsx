@@ -1,8 +1,8 @@
+import Navbar from "@/components/layouts/Navbar";
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import { clashDisplay, montserrat } from "@/lib/core/constants/fonts";
+import { cn } from "@/lib/core/utils";
 
 export const metadata: Metadata = {
   title: "GetLinked",
@@ -15,8 +15,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en'>
-      <body className={inter.className}>{children}</body>
+    <html data-theme='dark' lang='en' className='dark bg-primary-bg'>
+      <body
+        className={cn(
+          clashDisplay.variable,
+          montserrat.variable,
+          montserrat.className
+        )}
+      >
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
