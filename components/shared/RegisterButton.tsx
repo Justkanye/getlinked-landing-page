@@ -6,7 +6,7 @@ const RegisterButton = ({ className }: { className?: string }) => {
     <Link
       href='/register'
       className={cn(
-        "px-12 py-4 btn rounded text-white bg-primary-gradient hover:animate-my-pulse",
+        "px-12 py-4 btn rounded text-white bg-primary-gradient hover:animate-my-pulse capitalize text-base",
         className
       )}
     >

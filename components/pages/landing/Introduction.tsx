@@ -3,7 +3,7 @@ import { PiStarFourFill } from "react-icons/pi";
 
 const Introduction = () => {
   return (
-    <section className='grid grid-cols-2 py-16 px-20 border-border border-t'>
+    <section className='grid grid-cols-1 md:grid-cols-2 py-16 px-20 border-border border-t max-md:gap-5'>
       <div className='flex items-center justify-center'>
         <div className='relative'>
           <Image
