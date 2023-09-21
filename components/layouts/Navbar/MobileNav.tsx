@@ -8,10 +8,8 @@ import { cn } from "@/lib/core/utils";
 
 const MobileNav = ({ pathName }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
-  const toggleModal = () =>
-    setIsOpen(prev => {
-      return !prev;
-    });
+  const toggleModal = () => setIsOpen(prev => !prev);
+  const closeModal = () => setIsOpen(false);
   return (
     <>
       <div
@@ -44,12 +42,13 @@ const MobileNav = ({ pathName }: Props) => {
                     pathName === href,
                 })}
                 href={href}
+                onClick={closeModal}
               >
                 {label}
               </Link>
             </li>
           ))}
-          <RegisterButton className='mt-7' />
+          <RegisterButton onClick={closeModal} className='mt-7' />
         </ul>
       </div>
     </>

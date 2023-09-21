@@ -1,8 +1,19 @@
 import CustomButton from "./CustomButton";
 
-const RegisterButton = ({ className }: { className?: string }) => {
+const RegisterButton = ({
+  className,
+  onClick,
+}: {
+  className?: string;
+  onClick?: () => void;
+}) => {
   return (
-    <CustomButton href='/register' className={className} btnText='Register' />
+    <CustomButton
+      href='/register'
+      className={className}
+      onClick={onClick}
+      btnText='Register'
+    />
   );
 };
 
