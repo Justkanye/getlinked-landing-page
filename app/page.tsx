@@ -5,6 +5,7 @@ import Introduction from "@/components/pages/landing/Introduction";
 import KeyAttributes from "@/components/pages/landing/KeyAttributes";
 import Prices from "@/components/pages/landing/Prices";
 import RulesAndGuidelines from "@/components/pages/landing/RulesAndGuidelines";
+import Sponsors from "@/components/pages/landing/Sponsors";
 import Timeline from "@/components/pages/landing/Timeline";
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
         <FAQs />
         <Timeline />
         <Prices />
+        <Sponsors />
       </main>
       <Footer />
     </>
