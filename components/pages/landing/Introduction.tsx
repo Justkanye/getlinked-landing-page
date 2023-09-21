@@ -3,16 +3,16 @@ import { PiStarFourFill } from "react-icons/pi";
 
 const Introduction = () => {
   return (
-    <section className='grid grid-cols-1 md:grid-cols-2 py-16 px-20 border-border border-t max-md:gap-5'>
+    <section className='grid grid-cols-1 md:grid-cols-2 py-16 px-20 border-border border-t max-md:gap-8'>
       <div className='flex items-center justify-center'>
-        <div className='relative'>
+        <div className='relative flex flex-col'>
           <Image
             src='/assets/images/the big idea.png'
             alt='the big idea'
             width={490}
             height={447}
           />
-          <div className='absolute right-0 bottom-0 translate-x-1/2'>
+          <div className='md:absolute right-0 bottom-0 md:translate-x-1/2 max-md:self-center'>
             <Image
               src='/assets/images/arrow.png'
               alt='arrow'
@@ -27,9 +27,9 @@ const Introduction = () => {
           Idea!
         </p>
       </div>
-      <div className='flex flex-col justify-center'>
+      <div className='flex flex-col justify-center max-md:text-center'>
         <div className='flex justify-between items-center'>
-          <h2 className='font-clash-display font-bold text-3xl leading-none'>
+          <h2 className='font-clash-display font-bold text-2xl md:text-3xl leading-none'>
             Introduction to getlinked
             <br />
             <span className='text-primary'>tech Hackathon 1.0</span>
