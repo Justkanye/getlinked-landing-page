@@ -1,17 +1,8 @@
-import { cn } from "@/lib/core/utils";
-import Link from "next/link";
+import CustomButton from "./CustomButton";
 
 const RegisterButton = ({ className }: { className?: string }) => {
   return (
-    <Link
-      href='/register'
-      className={cn(
-        "px-12 py-4 btn rounded text-white bg-primary-gradient hover:animate-my-pulse capitalize text-base",
-        className
-      )}
-    >
-      Register
-    </Link>
+    <CustomButton href='/register' className={className} btnText='Register' />
   );
 };
 
