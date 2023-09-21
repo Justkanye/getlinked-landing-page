@@ -1,10 +1,14 @@
-const InvertedCurvedUnderline = ({ className }: { className?: string }) => {
+const InvertedCurvedUnderline = ({
+  className,
+  width = 255,
+  height = 17,
+}: Props) => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
-      width={255}
-      height={17}
-      viewBox='0 0 255 17'
+      width={width}
+      height={height}
+      viewBox={`0 0 255 17`}
       fill='none'
       className={className}
     >
@@ -18,3 +22,5 @@ const InvertedCurvedUnderline = ({ className }: { className?: string }) => {
 };
 
 export default InvertedCurvedUnderline;
+
+type Props = { className?: string; width?: number; height?: number };
