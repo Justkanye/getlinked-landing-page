@@ -28,6 +28,7 @@ const config: Config = {
         montserrat: ["var(--font-montserrat)"],
         "unica-one": ["var(--font-unica-one)"],
         "clash-display": ["var(--font-clash-display)"],
+        "made-tommy-medium-outline": ["var(--font-made-tommy-medium-outline)"],
       },
       animation: {
         bg: "bg-animation 2s ease infinite;",
