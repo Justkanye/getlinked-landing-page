@@ -21,6 +21,7 @@ const config: Config = {
         "903aff": "#903aff",
         primary: "var(--primary)",
         border: "rgba(255, 255, 255, 0.18)",
+        accent: "#fe34b9",
       },
       fontFamily: {
         inter: ["var(--font-inter)"],
