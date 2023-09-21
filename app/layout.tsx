@@ -7,6 +7,7 @@ import Navbar from "@/components/layouts/Navbar";
 import {
   clashDisplay,
   inter,
+  madeTommyMediumOutline,
   montserrat,
   unicaOne,
 } from "@/lib/core/constants/fonts";
@@ -31,6 +32,7 @@ export default function RootLayout({
       <body
         className={cn(
           clashDisplay.variable,
+          madeTommyMediumOutline.variable,
           montserrat.variable,
           unicaOne.variable,
           inter.variable,

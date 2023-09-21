@@ -15,8 +15,11 @@ const TypedTitle = () => {
           <ReactTyped
             typeSpeed={40}
             showCursor={showCursor}
+            // cursorChar={showCursor ? undefined : "@"}
             strings={["a Revolution in HR Innovation"]}
-            onComplete={() => setShowCursor(false)}
+            onComplete={() => {
+              setShowCursor(false);
+            }}
           />
         </h2>
         <InvertedCurvedUnderline width={165} />

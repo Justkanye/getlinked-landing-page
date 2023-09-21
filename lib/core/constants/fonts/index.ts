@@ -22,3 +22,8 @@ export const clashDisplay = LocalFont({
   variable: "--font-clash-display",
   display: "swap",
 });
+export const madeTommyMediumOutline = LocalFont({
+  src: "./MADE TOMMY Medium Outline_PERSONAL USE.otf",
+  variable: "--font-made-tommy-medium-outline",
+  display: "swap",
+});
