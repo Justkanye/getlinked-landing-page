@@ -35,7 +35,7 @@ export default function RootLayout({
           unicaOne.variable,
           inter.variable,
           montserrat.className,
-          "text-white"
+          "text-white overflow-x-hidden"
         )}
       >
         <Navbar />
