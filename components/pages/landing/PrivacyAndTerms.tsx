@@ -21,7 +21,7 @@ const PrivacyAndTerms = () => {
           our aim to always take of our participant
         </p>
         {/* Card */}
-        <div className='rounded-[5px] bg-[rgba(217, 217, 217, 0.03)] py-12 px-16 border border-primary mt-7 text-left flex flex-col'>
+        <div className='rounded-[5px] bg-[rgba(217,217,217,0.03)] py-12 px-16 border border-primary mt-7 text-left flex flex-col'>
           <p className='text-sm max-md:text-center'>
             At getlinked tech Hackathon 1.0, we value your privacy and are
             committed to protecting your personal information. This Privacy

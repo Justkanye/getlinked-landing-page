@@ -31,6 +31,9 @@ const config: Config = {
         "clash-display": ["var(--font-clash-display)"],
         "made-tommy-medium-outline": ["var(--font-made-tommy-medium-outline)"],
       },
+      boxShadow: {
+        "custom-shadow": "0px 4px 4px 0px rgba(0,0,0,0.25)",
+      },
       animation: {
         bg: "bg-animation 2s ease infinite;",
         "my-pulse": "my-pulse 650ms ease-in-out forwards;",

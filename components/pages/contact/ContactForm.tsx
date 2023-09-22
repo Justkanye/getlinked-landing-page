@@ -10,17 +10,12 @@ import { cn } from "@/lib/core/utils";
 import CustomButton from "@/components/shared/CustomButton";
 
 const errorClass = "text-xs text-error m-2 transition-opacity opacity-0";
-const style = {
-  backgroundColor: "rgba(255, 255, 255, 0.03)",
-  boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)",
-};
+const fieldClass =
+  "bg-[rgba(255,255,255,0.03)] shadow-custom-shadow w-full border-white rounded";
 
 const ContactForm = () => {
   return (
-    <div
-      className='rounded-xl w-full p-10 max-md:!bg-transparent max-md:!shadow-none'
-      style={style}
-    >
+    <div className='rounded-xl w-full p-10 bg-transparent md:bg-[rgba(255,255,255,0.03)] md:shadow-custom-shadow'>
       <Formik
         initialValues={contactFormInitialValues}
         validationSchema={contactFormValidationSchema}
@@ -36,9 +31,8 @@ const ContactForm = () => {
             <div>
               <Field
                 name='first_name'
-                className='input input-bordered w-full border-white rounded'
+                className={cn(fieldClass, "input input-bordered")}
                 placeholder='First Name'
-                style={style}
               />
               <p
                 className={cn(errorClass, {
@@ -52,9 +46,8 @@ const ContactForm = () => {
               <Field
                 name='email'
                 type='email'
-                className='input input-bordered w-full border-white rounded'
+                className={cn(fieldClass, "input input-bordered")}
                 placeholder='Mail'
-                style={style}
               />
               <p
                 className={cn(errorClass, {
@@ -68,9 +61,8 @@ const ContactForm = () => {
               <Field
                 name='message'
                 component='textarea'
-                className='textarea textarea-bordered w-full border-white rounded'
+                className={cn(fieldClass, "textarea textarea-bordered")}
                 placeholder='Message'
-                style={style}
               />
               <p
                 className={cn(errorClass, {

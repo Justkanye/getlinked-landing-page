@@ -16,7 +16,7 @@ const Sponsors = () => {
         </p>
       </div>
 
-      <div className='rounded-[5px] bg-[rgba(255, 255, 255, 0.01)] border border-primary flex items-center justify-center w-full py-16 px-5 mt-7'>
+      <div className='rounded-[5px] bg-[rgba(255,255,255,0.01)] border border-primary flex items-center justify-center w-full py-16 px-5 mt-7'>
         <div className='grid grid-cols-3 gap-6 grid-rows-2'>
           {sponsors.map(({ alt, img }, i) => (
             <div
