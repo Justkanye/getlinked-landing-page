@@ -7,17 +7,26 @@ const CustomButton = ({
   btnText,
   href,
   onClick,
+  loading,
 }: CustomButtonProps) => {
   const Wrapper = href?.startsWith("/") ? Link : "a";
   return (
     <Wrapper
       href={href!}
       className={cn(
-        "px-12 btn rounded text-white bg-primary-gradient hover:animate-my-pulse capitalize text-base flex items-center justify-center",
+        "no-animation px-12 btn rounded text-white bg-primary-gradient hover:animate-my-pulse capitalize text-base flex items-center justify-center",
+        {
+          "opacity-75": loading,
+        },
         className
       )}
       onClick={onClick}
     >
+      <span
+        className={cn({
+          "loading loading-spinner": loading,
+        })}
+      />
       {btnText}
     </Wrapper>
   );
@@ -30,4 +39,5 @@ type CustomButtonProps = {
   btnText: string;
   href?: string;
   onClick?: () => void;
+  loading?: boolean;
 };

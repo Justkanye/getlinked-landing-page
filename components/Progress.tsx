@@ -16,7 +16,11 @@ const Progress = () => {
     };
   }, []);
 
-  return <></>;
+  return (
+    <center>
+      <span className='loading loading-infinity loading-lg' />
+    </center>
+  );
 };
 
 export default Progress;
