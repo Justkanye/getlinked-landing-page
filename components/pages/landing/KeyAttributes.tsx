@@ -21,7 +21,7 @@ const KeyAttributes = () => {
         <div className='max-md:text-center'>
           {keyAttributes.map(({ content, title }, i) => (
             <p key={i} className='text-sm mt-5'>
-              <span className='text-accent text-base font-bold'>{title}:</span>{" "}
+              <span className='text-primary text-base font-bold'>{title}:</span>{" "}
               {content}
             </p>
           ))}

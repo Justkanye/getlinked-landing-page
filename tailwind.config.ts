@@ -21,7 +21,6 @@ const config: Config = {
         "903aff": "#903aff",
         primary: "var(--primary)",
         border: "rgba(255, 255, 255, 0.18)",
-        accent: "#fe34b9",
         "footer-bg": "#100B20",
       },
       fontFamily: {
@@ -68,9 +67,9 @@ const config: Config = {
       {
         dark: {
           ...daisyuiThemes["[data-theme=dark]"],
-          primary: "var(--primary)",
+          primary: "#d434fe",
           secondary: "var(--primary-bg)",
-          accent: "var(--accent)",
+          accent: "#903aff",
         },
       },
     ],

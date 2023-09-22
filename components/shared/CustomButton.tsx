@@ -25,6 +25,7 @@ const CustomButton = ({
       <span
         className={cn({
           "loading loading-spinner": loading,
+          hidden: !loading,
         })}
       />
       {btnText}

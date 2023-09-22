@@ -9,13 +9,13 @@ export const handleContactRequest = (
   helpers: FormikHelpers<ContactFormValues>
 ) => {
   console.log(values);
-  axios
-    .post(`${BACKEND_URL}/hackathon/contact-form`, values)
-    .then(res => {
+  axios.post(`${BACKEND_URL}/hackathon/contact-form`, values).then(
+    res => {
       console.log(res);
-    })
-    .catch(e => {
+    },
+    e => {
       console.log(e);
       helpers.setErrors({ message: "Failed" });
-    });
+    }
+  );
 };
