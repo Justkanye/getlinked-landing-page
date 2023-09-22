@@ -38,10 +38,7 @@ const Hero = () => {
             <br />
             stand a chance to win a Big prize
           </p>
-          <div className='mt-10 mb-16'>
-            <RegisterButton />
-          </div>
-
+          <RegisterButton className='w-fit mt-10 mb-16' />
           {/* countdown */}
           <Countdown />
         </div>

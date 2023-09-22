@@ -6,6 +6,7 @@ import { navlinks } from "@/lib/core/constants/navigation";
 import { cn } from "@/lib/core/utils";
 import RegisterButton from "@/components/shared/RegisterButton";
 import MobileNav from "./MobileNav";
+import BrandLink from "@/components/shared/BrandLink";
 
 const Navbar = () => {
   const pathName = usePathname();
@@ -13,13 +14,7 @@ const Navbar = () => {
     <>
       <nav className='navbar px-20 pt-10 pb-6'>
         <div className='flex-1'>
-          <Link
-            href='/'
-            className='font-bold font-clash-display text-4xl transition-colors duration-500 ease-in-out hover:text-primary group'
-          >
-            get
-            <span className='text-primary group-hover:text-white'>Linked</span>
-          </Link>
+          <BrandLink />
         </div>
         <div className='flex-none'>
           <ul className='menu menu-horizontal items-center hidden md:inline-flex'>

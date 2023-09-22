@@ -17,7 +17,7 @@ const Timelines = () => {
             <VerticalTimelineElement
               key={i}
               date={date}
-              icon={(i + 1).toString()}
+              icon={<p>{i + 1}</p>}
               dateClassName='text-primary !text-2xl !font-bold'
               contentStyle={{
                 backgroundColor: "transparent",

@@ -13,7 +13,7 @@ const CustomButton = ({
     <Wrapper
       href={href!}
       className={cn(
-        "px-12 py-4 btn rounded text-white bg-primary-gradient hover:animate-my-pulse capitalize text-base",
+        "px-12 btn rounded text-white bg-primary-gradient hover:animate-my-pulse capitalize text-base flex items-center justify-center",
         className
       )}
       onClick={onClick}

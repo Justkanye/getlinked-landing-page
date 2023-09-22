@@ -27,7 +27,7 @@ const Prices = () => {
             height={482}
           />
         </div>
-        <div className='flex gap-3 md:col-span-3 max-md:mt-20'>
+        <div className='flex justify-center gap-3 md:col-span-3 max-md:mt-20'>
           <PriceCard
             img='/assets/images/silver_medal.png'
             pos='2nd'

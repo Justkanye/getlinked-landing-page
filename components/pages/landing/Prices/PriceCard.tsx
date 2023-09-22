@@ -8,7 +8,8 @@ const PriceCard = ({ alt, img, price, pos }: Props) => {
       className={cn(
         "card border-primary border rounded-lg bg-[rgba(212, 52, 254, 0.12)] w-32 md:w-56 h-40 md:h-80 mt-10 md:mt-[90px] relative",
         {
-          "mt-16 md:mt-36 -translate-y-[7%]": emphasize,
+          "mt-16 md:mt-36 -translate-y-[7%] bg-[rgba(144, 58, 255, 0.12)] border-903aff":
+            emphasize,
         }
       )}
     >
