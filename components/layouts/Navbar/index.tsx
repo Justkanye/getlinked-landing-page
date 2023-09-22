@@ -1,12 +1,23 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Router from "next/router";
 
 import { navlinks } from "@/lib/core/constants/navigation";
 import { cn } from "@/lib/core/utils";
 import RegisterButton from "@/components/shared/RegisterButton";
 import MobileNav from "./MobileNav";
 import BrandLink from "@/components/shared/BrandLink";
+
+Router.events.on("routeChangeStart", () => {
+  console.log("routeChangeStart");
+});
+Router.events.on("routeChangeComplete", () => {
+  console.log("routeChangeComplete");
+});
+Router.events.on("routeChangeError", () => {
+  console.log("routeChangeError");
+});
 
 const Navbar = () => {
   const pathName = usePathname();
@@ -31,7 +42,7 @@ const Navbar = () => {
                 </Link>
               </li>
             ))}
-            <RegisterButton className='ml-20' />
+            <RegisterButton className='ml-20' pathName={pathName} />
           </ul>
           <MobileNav pathName={pathName} />
         </div>

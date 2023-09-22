@@ -48,7 +48,11 @@ const MobileNav = ({ pathName }: Props) => {
               </Link>
             </li>
           ))}
-          <RegisterButton onClick={closeModal} className='mt-7' />
+          <RegisterButton
+            pathName={pathName}
+            onClick={closeModal}
+            className='mt-7'
+          />
         </ul>
       </div>
     </>
