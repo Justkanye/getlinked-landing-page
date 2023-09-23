@@ -3,7 +3,7 @@ import Link from "next/link";
 const BrandLink = () => {
   return (
     <Link
-      href='/'
+      href='/#'
       className='font-bold font-clash-display text-2xl md:text-4xl transition-colors duration-500 ease-in-out hover:text-primary group'
     >
       get

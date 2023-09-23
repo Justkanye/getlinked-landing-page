@@ -27,7 +27,9 @@ const RegisterSelectFields = ({
           name='category'
           component='select'
         >
-          <option className={optionClassName}>Select your category</option>
+          <option className={optionClassName} value={-1}>
+            Select your category
+          </option>
           {categories.map(category => (
             <option
               key={category.id}
@@ -55,7 +57,9 @@ const RegisterSelectFields = ({
           name='group_size'
           component='select'
         >
-          <option className={optionClassName}>Select</option>
+          <option className={optionClassName} value={-1}>
+            Select
+          </option>
           {Array(10)
             .fill(0)
             .map((_, i) => (

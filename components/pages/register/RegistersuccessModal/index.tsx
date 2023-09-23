@@ -27,8 +27,6 @@ const RegistersuccessModal = ({ modalRef }: Props) => {
           Yes, it was easy and you did it!
           <br />
           check your mail box for next step
-          <br />
-          {width} / {height}
         </p>
         <CustomButton
           btnText='Back'

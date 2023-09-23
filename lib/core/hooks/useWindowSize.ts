@@ -12,12 +12,12 @@ const useWindowSize = () => {
   useEffect(() => {
     const handleResize = () => {
       setWindowSize({
-        width: window.innerWidth,
-        height: window.innerHeight,
+        width: Math.max(window?.innerWidth || 300, 300),
+        height: Math.max(window?.innerHeight || 500, 500),
       });
     };
     window?.addEventListener("resize", handleResize);
-    if (typeof window !== "undefined") handleResize();
+    handleResize();
 
     return () => window?.removeEventListener("resize", handleResize);
   }, []);

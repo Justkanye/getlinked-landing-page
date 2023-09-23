@@ -8,15 +8,17 @@ export const registerFormInitialValues: RegisterFormValues = {
   team_name: "",
   project_topic: "",
   privacy_poclicy_accepted: false,
+  category: -1,
+  group_size: -1,
 };
 
 export const registerFormValidationSchema = yup.object().shape({
   email: yup.string().required().email().label("Email"),
   phone_number: yup.string().min(5).required().label("Phone number"),
-  group_size: yup.number().required().label("Group size"),
+  group_size: yup.number().required().positive().label("Group size"),
   project_topic: yup.string().required().min(3).label("Project topic"),
   team_name: yup.string().required().min(3).label("Team’s name"),
-  category: yup.number().required().label("Category"),
+  category: yup.number().required().positive().label("Category"),
   privacy_poclicy_accepted: yup
     .bool()
     .isTrue(
