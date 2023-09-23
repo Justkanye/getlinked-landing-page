@@ -1,13 +1,20 @@
 import Image from "next/image";
 import { PiStarFourFill } from "react-icons/pi";
 
+import MotionContainer from "@/components/layouts/framer-motion/MotionContainer";
+import { fadeIn } from "@/lib/core/helpers/motion";
+
 const Introduction = () => {
   return (
     <section
       id='overview'
       className='grid grid-cols-1 md:grid-cols-2 py-16 px-10 md:px-20 border-border border-t gap-8 md:gap-4'
     >
-      <div className='flex items-center justify-center'>
+      <MotionContainer
+        variants={fadeIn("right", "tween", 0.2, 1)}
+        className='flex items-center justify-center'
+        whileInView='show'
+      >
         <div className='relative flex flex-col'>
           <Image
             src='/assets/images/the big idea.png'
@@ -29,8 +36,12 @@ const Introduction = () => {
           <br />
           Idea!
         </p>
-      </div>
-      <div className='flex flex-col justify-center max-md:text-center'>
+      </MotionContainer>
+      <MotionContainer
+        variants={fadeIn("down", "tween", 0.6, 1)}
+        whileInView='show'
+        className='flex flex-col justify-center max-md:text-center'
+      >
         <div className='flex justify-center md:justify-between items-center'>
           <h2 className='font-clash-display font-bold text-2xl md:text-3xl leading-none'>
             Introduction to getlinked
@@ -47,7 +58,7 @@ const Introduction = () => {
           problems, pushing the boundaries of technology, and creating solutions
           that can change the world, that&apos;s what we&apos;re all about!
         </p>
-      </div>
+      </MotionContainer>
     </section>
   );
 };

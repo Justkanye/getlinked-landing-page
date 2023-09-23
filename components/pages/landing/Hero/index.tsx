@@ -5,6 +5,8 @@ import RegisterButton from "@/components/shared/RegisterButton";
 import Countdown from "./Countdown";
 import TypedTitle from "./TypedTitle";
 import HeroImages from "./HeroImages";
+import MotionContainer from "@/components/layouts/framer-motion/MotionContainer";
+import { textVariant } from "@/lib/core/helpers/motion";
 
 const Hero = () => {
   return (
@@ -18,11 +20,18 @@ const Hero = () => {
             <div className='self-end lg:mr-6 md:-mb-3 mr-5 -mb-2 relative aspect-square md:w-[53px] md:h-[73px] w-[18px] h-[26px]'>
               <Image src='/assets/images/creative.png' alt='creative' fill />
             </div>
-            <h2 className='font-clash-display font-bold text-[32px] sm:text-5xl md:text-6xl lg:text-[80px] md:leading-none'>
+            <MotionContainer
+              as='h2'
+              variants={textVariant(0.2)}
+              className='font-clash-display font-bold text-[32px] sm:text-5xl md:text-6xl lg:text-[80px] md:leading-none'
+            >
               getlinked Tech
-            </h2>
+            </MotionContainer>
           </div>
-          <div className='flex items-center gap-1'>
+          <MotionContainer
+            variants={textVariant(0.2)}
+            className='flex items-center gap-1'
+          >
             <h2 className='font-clash-display font-bold text-[32px] sm:text-5xl lg:text-7xl xl:text-[80px] md:leading-none'>
               Hackathon <span className='text-primary'>1.0</span>
             </h2>
@@ -32,7 +41,7 @@ const Hero = () => {
             <div className='w-8 md:w-14 lg:w-16 xl:w-[86px] relative aspect-square'>
               <Image src='/assets/images/spark.png' alt='spark' fill />
             </div>
-          </div>
+          </MotionContainer>
 
           <p className='md:text-xl md:leading-8 text-base leading-5 max-md:w-4/5 max-md:text-center'>
             Participate in getlinked tech Hackathon 2023{" "}

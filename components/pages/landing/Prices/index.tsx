@@ -1,6 +1,8 @@
 import Image from "next/image";
 
 import PriceCard from "./PriceCard";
+import MotionContainer from "@/components/layouts/framer-motion/MotionContainer";
+import { zoomIn } from "@/lib/core/helpers/motion";
 
 const Prices = () => {
   return (
@@ -18,15 +20,16 @@ const Prices = () => {
           </p>
         </div>
       </div>
+
       <div className='grid grid-cols-1 md:grid-cols-5 gap-2 items-center mt-10 md:mt-24'>
-        <div className='md:col-span-2'>
+        <MotionContainer variants={zoomIn(0.2, 1)} className='md:col-span-2'>
           <Image
             src='/assets/images/trophy.png'
             alt='trophy'
             width={548}
             height={482}
           />
-        </div>
+        </MotionContainer>
         <div className='flex justify-center gap-3 md:col-span-3 max-md:mt-20'>
           <PriceCard
             img='/assets/images/silver_medal.png'

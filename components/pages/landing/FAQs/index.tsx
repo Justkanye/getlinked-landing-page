@@ -1,6 +1,9 @@
-import { faqs } from "@/lib/core/constants/faqs";
 import Image from "next/image";
+
 import FAQ from "./FAQ";
+import { faqs } from "@/lib/core/constants/faqs";
+import { fadeIn } from "@/lib/core/helpers/motion";
+import MotionContainer from "@/components/layouts/framer-motion/MotionContainer";
 
 const FAQs = () => {
   return (
@@ -8,7 +11,10 @@ const FAQs = () => {
       id='faqs'
       className='grid grid-cols-1 md:grid-cols-2 py-16 px-10 md:px-20 border-border border-t max-md:gap-8'
     >
-      <div className='flex flex-col justify-center max-md:text-center'>
+      <MotionContainer
+        variants={fadeIn("up", "tween", 0.2, 1)}
+        className='flex flex-col justify-center max-md:text-center'
+      >
         <h2 className='font-clash-display font-bold text-2xl md:text-3xl leading-none'>
           Frequently Asked
           <br />
@@ -23,13 +29,15 @@ const FAQs = () => {
             <FAQ key={i} {...faq} defaultChecked={i === 0} />
           ))}
         </div>
-      </div>
-      <Image
-        src='/assets/images/faq.png'
-        alt='FAQs hero image'
-        width={664}
-        height={664}
-      />
+      </MotionContainer>
+      <MotionContainer variants={fadeIn("left", "tween", 0.6, 1)}>
+        <Image
+          src='/assets/images/faq.png'
+          alt='FAQs hero image'
+          width={664}
+          height={664}
+        />
+      </MotionContainer>
       {/* Keep accordion styles */}
       <div className='hidden collapse collapse-title collapse-content collapse-plus collapse-open' />
     </section>
