@@ -37,7 +37,7 @@ const Introduction = () => {
             <br />
             <span className='text-primary'>tech Hackathon 1.0</span>
           </h2>
-          <PiStarFourFill className='text-xl md:text-4xl text-primary' />
+          <PiStarFourFill className='text-xl md:text-4xl text-primary animate-pulse' />
         </div>
         <p className='text-sm mt-4'>
           Our tech hackathon is a melting pot of visionaries, and its purpose is

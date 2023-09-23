@@ -13,7 +13,7 @@ const Hero = () => {
       <div className='flex md:pt-5 relative flex-col md:flex-row'>
         <div className='w-[40%] hidden md:block' />
         <div className='flex flex-col md:absolute top-0 bottom-0 left-0 md:w-[65%] mt-5 md:ml-20 max-md:items-center'>
-          <PiStarFourFill className='md:m-12 m-4 text-xs md:text-4xl' />
+          <PiStarFourFill className='md:m-12 m-4 text-xs md:text-4xl animate-pulse' />
           <div className='flex flex-col w-fit'>
             <div className='self-end lg:mr-6 md:-mb-3 mr-5 -mb-2 relative aspect-square md:w-[53px] md:h-[73px] w-[18px] h-[26px]'>
               <Image src='/assets/images/creative.png' alt='creative' fill />
