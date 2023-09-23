@@ -10,20 +10,26 @@ const RegisterButton = ({
   pathName?: string;
   onClick?: () => void;
 }) => {
+  const isActive = pathName === "/register";
   return (
-    <CustomButton
-      href='/register'
+    <div
       className={cn(
+        "rounded bg-transparent p-[2px] hover:animate-my-pulse",
         {
-          "btn-outline btn-accent bg-transparent hover:bg-transparent":
-            pathName === "/register",
+          "bg-primary-gradient": isActive,
         },
-        "border-2",
         className
       )}
-      onClick={onClick}
-      btnText='Register'
-    />
+    >
+      <CustomButton
+        href='/register'
+        className={cn("!animate-none", {
+          "border-primary-bg bg-primary-bg hover:bg-primary-bg": isActive,
+        })}
+        onClick={onClick}
+        btnText='Register'
+      />
+    </div>
   );
 };
 
