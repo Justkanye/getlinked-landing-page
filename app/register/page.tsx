@@ -7,6 +7,7 @@ import RegisterForm from "@/components/pages/register/RegisterForm";
 import { getCategories } from "@/lib/features/registration/api";
 import MotionContainer from "@/components/layouts/framer-motion/MotionContainer";
 import { fadeIn } from "@/lib/core/helpers/motion";
+import { PiStarFourFill } from "react-icons/pi";
 
 export const metadata: Metadata = {
   title: "Register - GetLinked",
@@ -17,7 +18,11 @@ const RegisterPage = async () => {
 
   return (
     <main className='py-10 px-5 grid grid-cols-1 md:grid-cols-2 bg-gradient-radial'>
-      <MotionContainer variants={fadeIn("right", "spring", 0.2, 1)}>
+      <MotionContainer
+        variants={fadeIn("right", "spring", 0.2, 1)}
+        className='relative'
+      >
+        <PiStarFourFill className='text-xl md:text-4xl text-primary animate-pulse absolute left-0 -top-16' />
         <Image
           src='/assets/images/thumbs-up-png 1.png'
           alt='Man showing thumbs up'

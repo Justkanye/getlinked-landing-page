@@ -1,5 +1,6 @@
 "use client";
 import { Formik, Form, Field } from "formik";
+import { PiStarFourFill } from "react-icons/pi";
 
 import { handleContactRequest } from "@/lib/features/contact/api";
 import {
@@ -15,7 +16,7 @@ const fieldClass =
 
 const ContactForm = () => {
   return (
-    <div className='rounded-xl w-full p-10 bg-transparent md:bg-[rgba(255,255,255,0.03)] md:shadow-custom-shadow'>
+    <div className='rounded-xl w-full p-10 bg-transparent md:bg-[rgba(255,255,255,0.03)] md:shadow-custom-shadow relative'>
       <Formik
         initialValues={contactFormInitialValues}
         validationSchema={contactFormValidationSchema}
@@ -81,6 +82,8 @@ const ContactForm = () => {
           </Form>
         )}
       </Formik>
+      <PiStarFourFill className='text-xl md:text-4xl text-primary animate-pulse absolute -left-2 md:bottom-32 bottom-0' />
+      <PiStarFourFill className='text-xl md:text-4xl animate-pulse absolute -right- -bottom-10' />
     </div>
   );
 };

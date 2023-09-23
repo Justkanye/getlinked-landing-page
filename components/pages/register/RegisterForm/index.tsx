@@ -15,6 +15,7 @@ import RegisterFormHead from "./RegisterFormHead";
 import { Category } from "@/lib/features/registration/types";
 import RegisterSelectFields from "./RegisterSelectFields";
 import RegistersuccessModal from "../RegistersuccessModal";
+import { PiStarFourFill } from "react-icons/pi";
 
 const errorClass = "text-xs text-error m-2 transition-opacity opacity-0";
 const fieldClass =
@@ -25,7 +26,7 @@ const RegisterForm = ({ categories }: Props) => {
   const showModal = () => ref.current?.show();
 
   return (
-    <div className='rounded-xl p-10 bg-transparent md:bg-[rgba(255,255,255,0.03)] md:shadow-custom-shadow'>
+    <div className='rounded-xl p-10 bg-transparent md:bg-[rgba(255,255,255,0.03)] md:shadow-custom-shadow relative'>
       <Formik
         initialValues={registerFormInitialValues}
         validationSchema={registerFormValidationSchema}
@@ -97,6 +98,8 @@ const RegisterForm = ({ categories }: Props) => {
           </Form>
         )}
       </Formik>
+      <PiStarFourFill className='text-xl md:text-4xl text-primary animate-pulse absolute -left-2 md:bottom-32 bottom-0' />
+      <PiStarFourFill className='text-xl md:text-4xl animate-pulse absolute -right- -bottom-10' />
       <RegistersuccessModal modalRef={ref} />
     </div>
   );
