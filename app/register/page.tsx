@@ -1,3 +1,5 @@
+import "@sweetalert2/theme-dark/dark.css";
+
 import { Metadata } from "next";
 import Image from "next/image";
 
@@ -19,6 +21,7 @@ const RegisterPage = async () => {
           alt='Man showing thumbs up'
           width={717}
           height={717}
+          priority
         />
       </div>
       <RegisterForm categories={categories} />
