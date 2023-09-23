@@ -16,6 +16,7 @@ const Introduction = () => {
         whileInView='show'
       >
         <div className='relative flex flex-col'>
+          <PiStarFourFill className='text-xl md:text-4xl text-primary animate-pulse absolute -left-20 top-1/2' />
           <Image
             src='/assets/images/the big idea.png'
             alt='the big idea'

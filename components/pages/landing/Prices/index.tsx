@@ -22,7 +22,10 @@ const Prices = () => {
       </div>
 
       <div className='grid grid-cols-1 md:grid-cols-5 gap-2 items-center mt-10 md:mt-24'>
-        <MotionContainer variants={zoomIn(0.2, 1)} className='md:col-span-2'>
+        <MotionContainer
+          variants={zoomIn(0.2, 0.7)}
+          className='md:col-span-2 bg-gradient-radial-center'
+        >
           <Image
             src='/assets/images/trophy.png'
             alt='trophy'

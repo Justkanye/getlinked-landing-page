@@ -1,7 +1,9 @@
 "use client";
 
 import InvertedCurvedUnderline from "@/components/icons/InvertedCurvedUnderline";
+import MotionContainer from "@/components/layouts/framer-motion/MotionContainer";
 import Typewriter from "@/components/shared/Typewriter";
+import { fadeIn } from "@/lib/core/helpers/motion";
 
 const TypedTitle = () => {
   return (
@@ -10,7 +12,9 @@ const TypedTitle = () => {
         <h2 className='font-clash-display font-bold text-lg sm:text-2xl md:text-4xl italic'>
           Igniting <Typewriter strings={["a Revolution in HR Innovation"]} />
         </h2>
-        <InvertedCurvedUnderline className='max-sm:w-28 max-md:w-40' />
+        <MotionContainer variants={fadeIn("left", "spring", 1.5, 1.5)}>
+          <InvertedCurvedUnderline className='max-sm:w-28 max-md:w-40' />
+        </MotionContainer>
       </div>
     </div>
   );

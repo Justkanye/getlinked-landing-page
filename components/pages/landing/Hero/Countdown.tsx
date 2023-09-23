@@ -5,8 +5,7 @@ import { useEffect, useState } from "react";
 
 const Countdown = () => {
   const [canRender, setCanRender] = useState(false);
-  // Define the date and time in UTC
-  const utcDate = new Date(Date.UTC(2023, 8, 23, 23, 59, 0));
+  const date = new Date("2023-09-26");
 
   useEffect(() => {
     if (typeof window !== "undefined") setCanRender(true);
@@ -14,7 +13,7 @@ const Countdown = () => {
 
   return canRender ? (
     <ReactCountdown
-      date={utcDate}
+      date={date}
       daysInHours
       renderer={({ hours, minutes, seconds, days }) => (
         <div className='flex items-center gap-6'>

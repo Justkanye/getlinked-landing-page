@@ -30,7 +30,21 @@ const FAQs = () => {
           ))}
         </div>
       </MotionContainer>
-      <MotionContainer variants={fadeIn("left", "tween", 0.6, 1)}>
+      <MotionContainer
+        variants={fadeIn("left", "tween", 0.6, 1)}
+        className='flex flex-col items-center'
+      >
+        <div className='flex justify-evenly w-full'>
+          <h1 className='font-made-tommy-medium-outline text-primary font-medium text-8xl self-end'>
+            ?
+          </h1>
+          <h1 className='font-made-tommy-medium-outline text-9xl text-primary font-medium'>
+            ?
+          </h1>
+          <h1 className='font-made-tommy-medium-outline text-primary font-medium text-8xl self-end'>
+            ?
+          </h1>
+        </div>
         <Image
           src='/assets/images/faq.png'
           alt='FAQs hero image'

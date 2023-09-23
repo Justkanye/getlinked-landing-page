@@ -1,15 +1,17 @@
 import Image from "next/image";
+import { PiStarFourFill } from "react-icons/pi";
 
 import { fadeIn } from "@/lib/core/helpers/motion";
 import MotionContainer from "@/components/layouts/framer-motion/MotionContainer";
 
 const RulesAndGuidelines = () => {
   return (
-    <section className='grid grid-cols-1 md:grid-cols-2 py-16 px-10 md:px-20 border-border border-t max-md:gap-8'>
+    <section className='grid grid-cols-1 md:grid-cols-2 py-16 px-10 md:px-20 border-border border-t max-md:gap-8 bg-gradient-radial'>
       <MotionContainer
         variants={fadeIn("up", "tween", 0.2, 1)}
-        className='flex flex-col justify-center max-md:text-center max-md:order-2'
+        className='flex flex-col justify-center max-md:text-center max-md:order-2 relative'
       >
+        <PiStarFourFill className='text-xl md:text-4xl text-primary animate-pulse self-end md:self-center' />
         <h2 className='font-clash-display font-bold text-2xl md:text-3xl leading-none'>
           Rules and
           <br />
@@ -25,7 +27,11 @@ const RulesAndGuidelines = () => {
         </p>
       </MotionContainer>
 
-      <MotionContainer variants={fadeIn("left", "tween", 0.6, 1)}>
+      <MotionContainer
+        variants={fadeIn("left", "tween", 0.6, 1)}
+        className='relative flex items-center'
+      >
+        <PiStarFourFill className='text-xl md:text-4xl animate-pulse absolute left-0 md:bottom-1/3' />
         <Image
           src='/assets/images/rules.png'
           alt='rules hero image'

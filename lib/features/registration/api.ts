@@ -33,8 +33,8 @@ export const handleRegistrationRequest = (values: RegisterFormValues) => {
 };
 
 export const getCategories = async (): Promise<Category[]> => {
-  const res = await axios.get(`${BACKEND_URL}/hackathon/categories-list`);
-  return res.data;
+  // const res = await axios.get(`${BACKEND_URL}/hackathon/categories-list`);
+  // return res.data;
   return [
     {
       id: 1,

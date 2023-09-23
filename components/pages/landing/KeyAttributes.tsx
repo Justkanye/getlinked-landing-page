@@ -5,17 +5,24 @@ import CustomButton from "@/components/shared/CustomButton";
 import { fadeIn } from "@/lib/core/helpers/motion";
 import MotionContainer from "@/components/layouts/framer-motion/MotionContainer";
 import Typewriter from "@/components/shared/Typewriter";
+import { PiStarFourFill } from "react-icons/pi";
 
 const KeyAttributes = () => {
   return (
-    <section className='grid grid-cols-1 md:grid-cols-2 py-16 px-10 md:px-20 border-border border-t max-md:gap-8'>
-      <MotionContainer variants={fadeIn("right", "tween", 0.2, 1)}>
+    <section className='grid grid-cols-1 md:grid-cols-2 py-16 px-10 md:px-20 border-border border-t max-md:gap-8 bg-gradient-radial'>
+      <MotionContainer
+        variants={fadeIn("right", "tween", 0.2, 1)}
+        className='flex flex-col relative'
+      >
+        <PiStarFourFill className='text-xl md:text-4xl text-primary animate-pulse self-start' />
         <Image
           src='/assets/images/inspect.png'
           alt='Key attribute hero image'
           width={664}
           height={664}
         />
+        <PiStarFourFill className='text-xl md:text-4xl animate-pulse text-[#756c84] absolute' />
+        <PiStarFourFill className='text-xl md:text-4xl animate-pulse self-end md:mr-8' />
       </MotionContainer>
       <MotionContainer
         variants={fadeIn("down", "tween", 0.6, 1)}

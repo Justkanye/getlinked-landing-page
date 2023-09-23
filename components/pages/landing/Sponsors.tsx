@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Sponsors = () => {
   return (
-    <section className='py-16 px-10 md:px-20 border-border border-t'>
+    <section className='py-16 px-10 md:px-20 border-border border-t bg-gradient-radial'>
       <div className='flex flex-col items-center'>
         <h3 className='font-bold font-clash-display text-xl md:text-4xl'>
           Partners and Sponsors

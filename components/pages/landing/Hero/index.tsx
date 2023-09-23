@@ -10,12 +10,13 @@ import { textVariant } from "@/lib/core/helpers/motion";
 
 const Hero = () => {
   return (
-    <section className='pt-5 border-border border-t'>
+    <section className='pt-5 border-border border-t bg-gradient-radial'>
       <TypedTitle />
       <div className='flex md:pt-5 relative flex-col md:flex-row'>
         <div className='w-[40%] hidden md:block' />
         <div className='flex flex-col md:absolute top-0 bottom-0 left-0 md:w-[65%] mt-5 md:ml-20 max-md:items-center'>
-          <PiStarFourFill className='md:m-12 m-4 text-xs md:text-4xl animate-pulse' />
+          <PiStarFourFill className='md:m-12 mr-52 text-xs md:text-4xl animate-pulse' />
+          <PiStarFourFill className='md:-mt-20 mr-32 text-xs md:text-4xl text-[#756c84] animate-pulse self-end' />
           <div className='flex flex-col w-fit'>
             <div className='self-end lg:mr-6 md:-mb-3 mr-5 -mb-2 relative aspect-square md:w-[53px] md:h-[73px] w-[18px] h-[26px]'>
               <Image src='/assets/images/creative.png' alt='creative' fill />
@@ -28,6 +29,7 @@ const Hero = () => {
               getlinked Tech
             </MotionContainer>
           </div>
+
           <MotionContainer
             variants={textVariant(0.2)}
             className='flex items-center gap-1'
@@ -48,7 +50,10 @@ const Hero = () => {
             <br className='max-md:hidden' />
             stand a chance to win a Big prize
           </p>
-          <RegisterButton className='w-fit mt-10 mb-16' />
+          <div className='relative'>
+            <RegisterButton className='w-fit mt-10 mb-16' />
+            <PiStarFourFill className='text-xs md:text-4xl text-[#756c84] animate-pulse absolute bottom-1/2 max-md:-right-20 md:bottom-0 md:left-1/2' />
+          </div>
           {/* countdown */}
           <Countdown />
         </div>

@@ -11,9 +11,16 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "gradient-radial": `
+          radial-gradient(at 67% 67%, hsla(268,83%,25%,0.7) 0px, transparent 20%),
+          radial-gradient(at 22% 26%, hsla(270,87%,28%,0.7) 0px, transparent 20%)
+        `,
+        "gradient-radial-single": `
+          radial-gradient(at 67% 67%, hsla(268,83%,25%,0.7) 0px, transparent 20%)
+        `,
+        "gradient-radial-center": `
+          radial-gradient(at 50% 50%, hsla(268,83%,25%,0.7) 0px, transparent 35%)
+        `,
         "primary-gradient": "var(--primary-gradient)",
       },
       colors: {
