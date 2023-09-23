@@ -4,7 +4,7 @@ import CheckMark from "../icons/CheckMark";
 
 const ListItem = ({
   children,
-  Icon = <CheckMark />,
+  Icon = <CheckMark className='h-fit max-sm:w-14' />,
 }: {
   children: ReactNode;
   Icon?: ReactNode;

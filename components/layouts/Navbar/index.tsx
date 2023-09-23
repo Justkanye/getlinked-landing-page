@@ -23,7 +23,7 @@ const Navbar = () => {
   const pathName = usePathname();
   return (
     <>
-      <nav className='navbar px-20 pt-10 pb-6'>
+      <nav className='navbar px-10 pt-5 pb-3 md:px-20 md:pt-10 md:pb-6'>
         <div className='flex-1'>
           <BrandLink />
         </div>

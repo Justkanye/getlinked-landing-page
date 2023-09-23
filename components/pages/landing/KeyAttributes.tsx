@@ -5,7 +5,7 @@ import CustomButton from "@/components/shared/CustomButton";
 
 const KeyAttributes = () => {
   return (
-    <section className='grid grid-cols-1 md:grid-cols-2 py-16 px-20 border-border border-t max-md:gap-8'>
+    <section className='grid grid-cols-1 md:grid-cols-2 py-16 px-10 md:px-20 border-border border-t max-md:gap-8'>
       <Image
         src='/assets/images/inspect.png'
         alt='Key attribute hero image'

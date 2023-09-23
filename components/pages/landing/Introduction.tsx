@@ -3,7 +3,10 @@ import { PiStarFourFill } from "react-icons/pi";
 
 const Introduction = () => {
   return (
-    <section className='grid grid-cols-1 md:grid-cols-2 py-16 px-20 border-border border-t max-md:gap-8'>
+    <section
+      id='overview'
+      className='grid grid-cols-1 md:grid-cols-2 py-16 px-10 md:px-20 border-border border-t gap-8 md:gap-4'
+    >
       <div className='flex items-center justify-center'>
         <div className='relative flex flex-col'>
           <Image
@@ -21,20 +24,20 @@ const Introduction = () => {
             />
           </div>
         </div>
-        <p className='absolute font-bold text-center text-2xl'>
+        <p className='absolute font-bold text-center text-base sm:text-xl md:text-2xl'>
           The Big
           <br />
           Idea!
         </p>
       </div>
       <div className='flex flex-col justify-center max-md:text-center'>
-        <div className='flex justify-between items-center'>
+        <div className='flex justify-center md:justify-between items-center'>
           <h2 className='font-clash-display font-bold text-2xl md:text-3xl leading-none'>
             Introduction to getlinked
             <br />
             <span className='text-primary'>tech Hackathon 1.0</span>
           </h2>
-          <PiStarFourFill className='text-4xl text-primary' />
+          <PiStarFourFill className='text-xl md:text-4xl text-primary' />
         </div>
         <p className='text-sm mt-4'>
           Our tech hackathon is a melting pot of visionaries, and its purpose is

@@ -7,7 +7,7 @@ const PrivacyAndTerms = () => {
   return (
     <section
       id='privacy-and-terms'
-      className='grid grid-cols-1 md:grid-cols-2 py-16 px-20 border-border border-t gap-8'
+      className='grid grid-cols-1 md:grid-cols-2 py-16 px-10 md:px-20 border-border border-t gap-8'
     >
       <div className='flex flex-col justify-center max-md:text-center'>
         <h2 className='font-clash-display font-bold text-2xl md:text-3xl leading-none'>
@@ -21,7 +21,7 @@ const PrivacyAndTerms = () => {
           our aim to always take of our participant
         </p>
         {/* Card */}
-        <div className='rounded-[5px] bg-[rgba(217,217,217,0.03)] py-12 px-16 border border-primary mt-7 text-left flex flex-col'>
+        <div className='rounded-[5px] bg-[rgba(217,217,217,0.03)] py-12 px-8 md:px-16 border border-primary mt-7 text-left flex flex-col'>
           <p className='text-sm max-md:text-center'>
             At getlinked tech Hackathon 1.0, we value your privacy and are
             committed to protecting your personal information. This Privacy
@@ -61,7 +61,7 @@ const PrivacyAndTerms = () => {
           width={560}
           height={750}
         />
-        <SafeGuard className='absolute -z-[1] top-0' />
+        <SafeGuard className='absolute -z-[1] top-0 max-w-full' />
       </div>
     </section>
   );
