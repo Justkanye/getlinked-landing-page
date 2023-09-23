@@ -1,6 +1,7 @@
 "use client";
+import { useState } from "react";
 import { Formik, Field } from "formik";
-import { Select, Checkbox, Form } from "react-daisyui";
+import { Form } from "react-daisyui";
 
 import { handleRegistrationRequest } from "@/lib/features/registration/api";
 import {
@@ -12,18 +13,26 @@ import { cn } from "@/lib/core/utils";
 import CustomButton from "@/components/shared/CustomButton";
 import RegisterFormHead from "./RegisterFormHead";
 import { Category } from "@/lib/features/registration/types";
+import RegisterSelectFields from "./RegisterSelectFields";
 
 const errorClass = "text-xs text-error m-2 transition-opacity opacity-0";
 const fieldClass =
   "bg-[rgba(255,255,255,0.03)] shadow-custom-shadow w-full border-white rounded";
 
 const RegisterForm = ({ categories }: Props) => {
+  const [showModal, setShowModal] = useState(false);
   return (
     <div className='rounded-xl p-10 bg-transparent md:bg-[rgba(255,255,255,0.03)] md:shadow-custom-shadow'>
       <Formik
         initialValues={registerFormInitialValues}
         validationSchema={registerFormValidationSchema}
-        onSubmit={handleRegistrationRequest}
+        onSubmit={async (values, { setSubmitting }) => {
+          setSubmitting(true);
+          const successful = await handleRegistrationRequest(values);
+          setSubmitting(false);
+          if (successful) setShowModal(true);
+          console.log({ successful });
+        }}
       >
         {({ isSubmitting, errors, touched, handleSubmit, values }) => (
           <Form className='flex flex-col gap-5' onSubmit={handleSubmit}>
@@ -49,21 +58,34 @@ const RegisterForm = ({ categories }: Props) => {
                   </p>
                 </div>
               ))}
+              <RegisterSelectFields
+                {...{ categories, errorClass, errors, fieldClass, touched }}
+              />
             </div>
             <p className='text-primary text-xs italic'>
               Please review your registration details before submitting
             </p>
-
-            <label className='label cursor-pointer'>
-              <Field
-                name='privacy_poclicy_accepted'
-                className='checkbox checkbox- justify-start gap-3'
-                type='checkbox'
-              />
-              <span className='label-text'>
-                I agreed with the event terms and conditions and privacy policy
-              </span>
-            </label>
+            <div className='form-control'>
+              <label className='label cursor-pointer justify-start gap-3'>
+                <Field
+                  name='privacy_poclicy_accepted'
+                  className='checkbox checkbox-primary border-white'
+                  type='checkbox'
+                />
+                <span className='label-text'>
+                  I agree with the event terms and conditions and privacy policy
+                </span>
+              </label>
+              <p
+                className={cn(errorClass, {
+                  "opacity-100":
+                    errors.privacy_poclicy_accepted &&
+                    touched.privacy_poclicy_accepted,
+                })}
+              >
+                {errors.privacy_poclicy_accepted || "error"}
+              </p>
+            </div>
             <CustomButton
               loading={isSubmitting}
               onClick={handleSubmit}
