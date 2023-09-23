@@ -6,9 +6,7 @@ export const registerFormInitialValues: RegisterFormValues = {
   email: "",
   phone_number: "",
   team_name: "",
-  group_size: 10,
   project_topic: "",
-  category: 1,
   privacy_poclicy_accepted: false,
 };
 
@@ -16,8 +14,8 @@ export const registerFormValidationSchema = yup.object().shape({
   email: yup.string().required().email().label("Email"),
   phone_number: yup.string().min(5).required().label("Phone number"),
   group_size: yup.number().required().label("Group size"),
-  project_topic: yup.number().required().min(3).label("Project topic"),
-  team_name: yup.number().required().min(3).label("Team’s name"),
+  project_topic: yup.string().required().min(3).label("Project topic"),
+  team_name: yup.string().required().min(3).label("Team’s name"),
   category: yup.number().required().label("Category"),
   privacy_poclicy_accepted: yup
     .bool()

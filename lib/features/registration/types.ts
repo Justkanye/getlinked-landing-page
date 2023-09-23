@@ -8,9 +8,9 @@ export type RegisterFormValues = {
   email: string;
   phone_number: string;
   team_name: string;
-  group_size: number;
+  group_size?: number;
   project_topic: string;
-  category: number;
+  category?: number;
   privacy_poclicy_accepted: boolean;
 };
 
