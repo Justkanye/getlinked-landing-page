@@ -10,6 +10,7 @@ const HeroImages = () => {
         <Image
           src='/assets/images/blue orb.png'
           alt='blue orb'
+          priority
           width={667}
           height={641}
         />
