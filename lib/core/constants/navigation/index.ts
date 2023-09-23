@@ -35,17 +35,17 @@ export const socialLinks: SocialLink[] = [
   },
   {
     id: "twitter",
-    href: "",
+    href: "https://twitter.com/getLinkedai",
     Icon: Twitter,
   },
   {
     id: "facebook",
-    href: "",
+    href: "https://www.facebook.com/getLinkedai",
     Icon: BiLogoFacebook,
   },
   {
     id: "linkedIn",
-    href: "",
+    href: "https://www.linkedin.com/company/getlinked-ai/",
     Icon: BiLogoLinkedin,
   },
 ];
