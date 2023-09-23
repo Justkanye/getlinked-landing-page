@@ -12,6 +12,7 @@ import {
   unicaOne,
 } from "@/lib/core/constants/fonts";
 import { TailwindIndicator } from "@/components/layouts/tailwind-indicator";
+import MotionProvider from "@/components/layouts/framer-motion/MotionProvider";
 
 export const metadata: Metadata = {
   title: "GetLinked",
@@ -40,9 +41,11 @@ export default function RootLayout({
           "text-white overflow-x-hidden"
         )}
       >
-        <Navbar />
-        {children}
-        <TailwindIndicator />
+        <MotionProvider>
+          <Navbar />
+          {children}
+          <TailwindIndicator />
+        </MotionProvider>
       </body>
     </html>
   );
