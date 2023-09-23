@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useRef } from "react";
 import { Formik, Field } from "formik";
 import { Form } from "react-daisyui";
 
@@ -14,13 +14,16 @@ import CustomButton from "@/components/shared/CustomButton";
 import RegisterFormHead from "./RegisterFormHead";
 import { Category } from "@/lib/features/registration/types";
 import RegisterSelectFields from "./RegisterSelectFields";
+import RegistersuccessModal from "../RegistersuccessModal";
 
 const errorClass = "text-xs text-error m-2 transition-opacity opacity-0";
 const fieldClass =
   "bg-[rgba(255,255,255,0.03)] shadow-custom-shadow w-full border-white rounded";
 
 const RegisterForm = ({ categories }: Props) => {
-  const [showModal, setShowModal] = useState(false);
+  const ref = useRef<HTMLDialogElement>(null);
+  const showModal = () => ref.current?.show();
+
   return (
     <div className='rounded-xl p-10 bg-transparent md:bg-[rgba(255,255,255,0.03)] md:shadow-custom-shadow'>
       <Formik
@@ -30,8 +33,7 @@ const RegisterForm = ({ categories }: Props) => {
           setSubmitting(true);
           const successful = await handleRegistrationRequest(values);
           setSubmitting(false);
-          if (successful) setShowModal(true);
-          console.log({ successful });
+          if (successful) showModal();
         }}
       >
         {({ isSubmitting, errors, touched, handleSubmit, values }) => (
@@ -88,13 +90,14 @@ const RegisterForm = ({ categories }: Props) => {
             </div>
             <CustomButton
               loading={isSubmitting}
-              onClick={handleSubmit}
+              // onClick={showModal}
               className='max-md:w-fit max-md:mx-auto'
               btnText={isSubmitting ? "Submitting..." : "Register Now"}
             />
           </Form>
         )}
       </Formik>
+      <RegistersuccessModal modalRef={ref} />
     </div>
   );
 };
