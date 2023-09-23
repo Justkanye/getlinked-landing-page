@@ -18,6 +18,7 @@ const Timelines = () => {
               key={i}
               date={date}
               icon={<p>{i + 1}</p>}
+              visible={process.env.NODE_ENV !== "production"}
               dateClassName='text-primary !text-2xl !font-bold'
               contentStyle={{
                 backgroundColor: "transparent",

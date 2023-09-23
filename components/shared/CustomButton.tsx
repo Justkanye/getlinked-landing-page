@@ -9,7 +9,7 @@ const CustomButton = ({
   onClick,
   loading,
 }: CustomButtonProps) => {
-  const Wrapper = href?.startsWith("/") ? Link : "a";
+  const Wrapper = href ? (href?.startsWith("/") ? Link : "a") : "button";
   return (
     <Wrapper
       href={href!}

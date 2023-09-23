@@ -30,7 +30,7 @@ export const footerUsefulLinks = [
 export const socialLinks: SocialLink[] = [
   {
     id: "instagram",
-    href: "",
+    href: "https://instagram.com/getlinked.ai",
     Icon: PiInstagramLogo,
   },
   {
