@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 const Countdown = () => {
   const [canRender, setCanRender] = useState(false);
-  const date = new Date("2023-09-26");
+  const date = new Date("2023-10-26");
 
   useEffect(() => {
     if (typeof window !== "undefined") setCanRender(true);
